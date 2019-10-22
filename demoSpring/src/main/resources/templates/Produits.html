@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+<h1>th:utext="${hello}"</h1>
+
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>prix</th>
+    </tr>
+    <tr th:each ="prod : ${products}">
+        <td th:utext="${prod.id}">...</td>
+        <td th:utext="${prod.nom}">...</td>
+        <td th:utext="${prod.prix}">...</td>
+    </tr>
+</table>
+<!--
+
+   In Thymeleaf the equivalent of
+   JSP's ${pageContext.request.contextPath}/edit.html
+   would be @{/edit.html}
+
+   -->
+
+<!--<a th:href="@{/personList}">Person List</a>-->
+
+</body>
+</html>
