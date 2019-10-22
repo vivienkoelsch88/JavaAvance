@@ -45,4 +45,15 @@ public class ProductDaoImpl implements ProductDao{
         products.add(product);
         return product;
     }
+
+    @Override
+    public Product delete(int id) {
+        for (Product product : products) {
+            if(product.getId() ==id){
+                products.remove(product);
+                return product;
+            }
+        }
+        return null;
+    }
 }
